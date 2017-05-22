@@ -6,6 +6,9 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 import io,os,re
 import jieba.analyse
+
+
+
 # 将pdf文件转化为txt文件。输入:pdf文件夹，得到txt文件output.txt
 def Pdf_to_txt(fileDir,outfile):
     codec = 'utf-8'
@@ -45,6 +48,7 @@ def clean_txt(outfile):
     print("-----------------------------------------完成txt清洗-------------------------------------")
     return 0
 
+
 # # 输入清理后的文本文件，进行分词，并去除停用词，输出分好词的文本。
 def word_segment():
     with open('stopword.txt', 'r') as f:
@@ -60,6 +64,10 @@ def word_segment():
     print("-----------------------------------------完成分词-------------------------------------")
 
 
+# # 输入清理后的文本文件，对中文句子分词，并去除停顿词，其中停顿词和标点符号,输出分好词的txt
+# def word_segment():
+#
+#     pass
 #
 # def main():
 #     pass
