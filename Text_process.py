@@ -21,7 +21,7 @@ def clean_txt(infile,cleaned_file):
     return 0
 
 
-# # 输入清理后的文本文件，进行分词，并去除停用词，输出分好词的文本。
+# 输入清理后的文本文件，进行分词，并去除停用词，输出分好词的文本。
 def word_segment(cleaned_file,train_data):
     with open('stop.txt', 'r') as f:
         stopwords = f.read()  # 打开stopword（停用词）文件
